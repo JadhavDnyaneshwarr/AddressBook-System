@@ -20,5 +20,13 @@ public class AddressBookMain {
         System.out.println(addressBook.contact.getState());
         System.out.println(addressBook.contact.getPhoneNumber());
         System.out.println(addressBook.contact.getEmail());
+        addressBook.deleteContact();
+        System.out.println(addressBook.contact.getFirstName());
+        System.out.println(addressBook.contact.getLastName());
+        System.out.println(addressBook.contact.getAddress());
+        System.out.println(addressBook.contact.getCity());
+        System.out.println(addressBook.contact.getState());
+        System.out.println(addressBook.contact.getPhoneNumber());
+        System.out.println(addressBook.contact.getEmail());
     }
 }

@@ -30,11 +30,11 @@ public class AddressBook {
         contact.setPhoneNumber(phoneNumber);
         contact.setEmail(email);
     }
-    void editContact(){
+    public void editContact() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter First name you want to search = ");
         String searchName = scanner.next();
-        if (contact.getFirstName().equalsIgnoreCase(searchName)){
+        if (contact.getFirstName().equalsIgnoreCase(searchName)) {
             System.out.println("Enter First name = ");
             String firstName = scanner.next();
             System.out.println("Enter Last name = ");
@@ -48,7 +48,7 @@ public class AddressBook {
             System.out.println("Enter Phone Number = ");
             String phoneNumber = scanner.next();
             System.out.println("Enter Email = ");
-            String email= scanner.next();
+            String email = scanner.next();
             contact.setFirstName(firstName);
             contact.setLastName(lastName);
             contact.setAddress(address);
@@ -56,6 +56,20 @@ public class AddressBook {
             contact.setState(state);
             contact.setPhoneNumber(phoneNumber);
             contact.setEmail(email);
+        }
+    }
+    public void deleteContact() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter First name you want to search = ");
+        String searchName = scanner.next();
+        if (contact.getFirstName().equalsIgnoreCase(searchName)) {
+            contact.setFirstName(null);
+            contact.setLastName(null);
+            contact.setAddress(null);
+            contact.setCity(null);
+            contact.setState(null);
+            contact.setPhoneNumber(null);
+            contact.setEmail(null);
         }
     }
 }
