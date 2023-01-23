@@ -76,4 +76,9 @@ public class Contact {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String toString(){
+        return ("\nFirstName:- " + firstName + "\nLastName:- " + lastName + "\nAddress:- " + address + "\nCity:- " + city + "\nState:- " + state +
+                 "\nContact Number:- " + phoneNumber + "\nEmail Id:-" + email);
+    }
 }
