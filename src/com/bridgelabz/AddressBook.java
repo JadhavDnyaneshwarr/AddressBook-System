@@ -1,11 +1,12 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class AddressBook {
 
-    static ArrayList<Contact> contactList = new ArrayList<>();
+    public static ArrayList<Contact> contactList = new ArrayList<>();
 
     void addContact(){
         Scanner scanner = new Scanner(System.in);
@@ -84,9 +85,15 @@ public class AddressBook {
     }
 
     public static void displayContact() {
-        for (Contact contactsDetailsValue : contactList ) {
-            System.out.println(contactsDetailsValue);
+        for (Contact contactsDetails : contactList ) {
+            System.out.println(contactsDetails);
             System.out.println("---------------------------");
         }
+    }
+
+    static HashMap<String, ArrayList<Contact>> addressBookHashMap = new HashMap<>();
+    public void dictionary(String nameOfAddressBook){
+        addressBookHashMap.put(nameOfAddressBook, contactList );
+        System.out.println(addressBookHashMap);
     }
 }

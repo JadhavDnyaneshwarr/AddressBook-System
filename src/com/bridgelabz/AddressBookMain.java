@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class AddressBookMain {
@@ -8,7 +11,7 @@ public class AddressBookMain {
         int chooseNumber;
         do {
             System.out.println("Enter the no as u want too choose to perform the certain task");
-            System.out.println("1. Add Deatils \n2. Edit Details \n3. Delete Details \n4. Display Details \n5. exit ");
+            System.out.println("1. Add Details \n2. Edit Details \n3. Delete Details \n4. Display Details \n5. exit ");
             chooseNumber = sc.nextInt();
 
             switch (chooseNumber){
@@ -35,8 +38,6 @@ public class AddressBookMain {
                     System.out.println("invalid Option choose");
                     break;
             }
-//           System.out.println("Do you want to contiune if yes press 1");
-//           option=sc.nextInt();
         }while (chooseNumber !=5 );
 
 
@@ -45,5 +46,6 @@ public class AddressBookMain {
         System.out.println("Welcome to address book program");
         AddressBook addressDetails = new AddressBook();
         menuChoose(addressDetails);
+        addressDetails.dictionary("FriendsBook");
     }
 }
